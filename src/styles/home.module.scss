@@ -1,0 +1,96 @@
+@import "./utils";
+
+.home {
+  width: 75rem;
+  margin: 0 auto;
+  @include flexer();
+  height: fit-content;
+  padding: 7rem 0;
+
+  .left {
+    @include flexer(column, center, flex-start);
+    gap: 2rem;
+    padding: 0 1.5rem;
+    h1 {
+      font-family: $font1;
+      color: $color1;
+      font-size: 3.5rem;
+    }
+    p {
+      font-family: $font1;
+      width: 34rem;
+      color: $color3;
+      font-size: 1.5rem;
+    }
+    button {
+      all: unset;
+      font-family: $font1;
+      color: $color4;
+      background-color: $color1;
+      padding: 0.8rem 4rem;
+      border-radius: 7px;
+    }
+  }
+  .right {
+    img {
+      width: 35rem;
+      height: 40rem;
+    }
+  }
+}
+
+// MEDIQ QUERIES
+    @media screen and (max-width: 1150px) {
+  .home {
+    padding: 3rem 1.2rem;
+    width: 100%;
+
+    .left {
+      gap: 1rem;
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        width: 80%;
+        font-size: 1.2rem;
+      }
+    }
+
+    .right {
+      img {
+        width: 40vw;
+        height: 30rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .home {
+    @include flexer(column);
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0.5rem;
+
+    .left {
+      @include flexer(center);
+      width: 100%;
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+
+    .right {
+      margin-top: 1.5rem;
+      width: 100%;
+      img {
+        width: 100%;
+        height: 25rem;
+      }
+    }
+  }
+}

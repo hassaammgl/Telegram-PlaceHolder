@@ -1,0 +1,43 @@
+@use "./utils" as utils;
+
+.faq {
+margin: 0 auto;
+font-family: utils.$font1;
+  width: 100%;
+  background-color: utils.$color10;
+  height: fit-content;
+  padding: 2.5rem 0;
+  .faqMain {
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    .content {
+      width: 45rem;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+
+      @media screen and (max-width: 760px) {
+        width: 92%;
+        background: utils.$color1;
+      }
+
+      .accordian {
+        margin-top: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .faq {
+    background-color: utils.$color1;
+    .faqMain {
+      h1 {
+        color: white;
+      }
+    }
+  }
+}

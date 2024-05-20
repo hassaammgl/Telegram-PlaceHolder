@@ -1,0 +1,30 @@
+@use "./utils" as utils;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  background-color: utils.$color1 !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: utils.$color1 !important;
+}
+.swiper {
+  padding: 3rem !important;
+}
+
+.multi-widget-selected {
+  font-size: 12rem !important;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  color: white;
+}

@@ -1,0 +1,21 @@
+$color1: #483eb3;
+$color2: #0b0451;
+$color3: #827ea7;
+$color4: #fff;
+$color5: #0a6dc2;
+$color6: #47408d;
+$color7: #393939;
+$color8: #626262;
+$color9: #f8f8f8;
+$color10: #eaf0ff;
+$color11: #c7c1ff;
+$color12: #eeeeee;
+
+$font1: "Inter", sans-serif;
+
+@mixin flexer($dir: row, $jc: center, $ai: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jc;
+  align-items: $ai;
+}

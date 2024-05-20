@@ -1,0 +1,6 @@
+@use "./utils" as utils;
+
+.sectionWrapper {
+  width: 100%;
+  @include utils.flexer();
+}

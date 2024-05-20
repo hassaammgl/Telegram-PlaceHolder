@@ -1,0 +1,127 @@
+@import "./utils";
+
+.header {
+  width: 100%;
+  height: fit-content;
+  font-family: $font1;
+  .nav {
+    width: 75%;
+    margin: 0 auto;
+    padding: 1rem;
+    @include flexer(row, space-between);
+    .logo {
+      font-weight: 800;
+      color: $color1;
+      font-size: 1.5rem;
+    }
+    .links {
+      width: 40%;
+      display: flex;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: $color1;
+        font-weight: 500;
+        padding: 1rem;
+        text-align: center;
+        margin: 0 5px;
+        transition: all ease-in-out 0.2s;
+        border-radius: 7px;
+        cursor: pointer;
+        &:nth-child(1) {
+          font-weight: 700;
+        }
+        &:hover {
+          background-color: $color5;
+        }
+        &:visited {
+          font-weight: 600;
+        }
+      }
+    }
+    .btn {
+      text-decoration: none;
+      color: $color1;
+      border: 1px solid $color1;
+      border-radius: 6px;
+      padding: 10px 2.5rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .hamburger {
+      display: none;
+      button {
+        background: none;
+        border: none;
+        .open {
+          height: 2rem;
+          color: black;
+          width: 1.8rem;
+        }
+      }
+      @media screen and (max-width: 980px) {
+        display: block;
+      }
+    }
+    @media screen and (max-width: 1330px) {
+      width: 98%;
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .header {
+    .nav {
+      .links {
+        display: none;
+      }
+      .btn {
+        display: none;
+      }
+    }
+  }
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  .mobile {
+    background: $color4;
+    height: 100%;
+    width: 100%;
+    button {
+      background: none;
+      border: none;
+      float: right;
+      margin-top: 1rem;
+      margin-right: 1rem;
+      .open {
+        height: 2rem;
+        color: black;
+        width: 1.8rem;
+      }
+    }
+    span {
+      margin: 3px 0;
+      padding: 0.5rem;
+      width: 100%;
+      display: inline-block;
+      &:hover {
+        background-color: $color10;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        font-weight: bold;
+      }
+      a {
+        text-decoration: none;
+        padding: 1rem;
+        font-size: 1.8rem;
+        font-family: $font1;
+        color: $color1;
+      }
+    }
+  }
+}

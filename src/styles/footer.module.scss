@@ -1,0 +1,159 @@
+@use "./utils" as utils;
+
+.footer {
+  background-color: utils.$color1;
+  color: white;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  .footercontent {
+    @include utils.flexer(center, space-evenly, flex-start);
+    text-align: center;
+    padding: 4rem 0;
+
+    .boxes {
+      gap: 1rem;
+      @include utils.flexer(column, space-between, flex-start);
+
+      > h2 {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      > a {
+        all: unset;
+        cursor: pointer;
+        font-size: 0.8rem;
+      }
+    }
+
+    .boxes1 {
+      gap: 1rem;
+      @include utils.flexer(column, space-between, flex-start);
+
+      > h2 {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      > .icons {
+        gap: 0.5rem;
+        cursor: pointer;
+        font-size: 1.2rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      > .mail {
+        @include utils.flexer();
+        gap: 0.5rem;
+        cursor: pointer;
+        a {
+          all: unset;
+          font-size: 0.8rem;
+        }
+      }
+
+      > .number {
+        gap: 0.5rem;
+        @include utils.flexer();
+        span {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .footerfooter {
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .footer {
+    width: 100%;
+    padding-left: 3rem;
+    .footercontent {
+      @include utils.flexer(column, space-evenly, flex-start);
+
+      .boxes {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.footerMob {
+  display: none;
+  background-color: utils.$color1;
+  color: white;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+
+  .footercontent {
+    padding: 2rem 1rem;
+    .header {
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 1rem 0;
+      font-family: utils.$font1;
+    }
+    > .icons2 {
+      gap: 2rem;
+      padding-bottom: 1rem;
+      @include utils.flexer();
+      cursor: pointer;
+      font-size: 1.8rem;
+    }
+
+    .accordian2 {
+      background-color: utils.$color1;
+      color: white;
+
+      h2 {
+        font-weight: 500;
+        font-size: 1.8rem;
+      }
+
+      .accordiancontent {
+        gap: 1rem;
+        @include utils.flexer(column, space-between, flex-start);
+  
+        > h2 {
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+  
+        > a {
+          all: unset;
+          cursor: pointer;
+          font-size: 0.8rem;
+        }
+
+        > .mail {
+          @include utils.flexer();
+          gap: 0.5rem;
+          cursor: pointer;
+          a {
+            all: unset;
+            font-size: 0.8rem;
+          }
+        }
+  
+        > .number {
+          gap: 0.5rem;
+          @include utils.flexer();
+          span {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+  .footerfooter {
+    padding-bottom: 1.5rem;
+    text-align: center;
+  }
+}

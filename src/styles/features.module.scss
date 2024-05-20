@@ -1,0 +1,106 @@
+@import "./utils";
+
+.features {
+  width: 75%;
+  margin: 0 auto;
+  @include flexer(column);
+  font-family: $font1;
+  padding: 1.5rem 0;
+  h1 {
+    color: $color2;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 1.5rem;
+    color: $color6;
+  }
+  .featureCards {
+    @include flexer(row, space-between);
+    margin: 1.5rem 0;
+    gap: 1.5rem;
+    .item {
+      @include flexer(column);
+      width: 10rem;
+      padding: 1rem;
+      border-radius: 7px;
+      color: $color6;
+
+      .icon {
+        font-size: 1.5rem;
+      }
+      span {
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: bold;
+      }
+      &:nth-child(1) {
+        color: $color4;
+        background-color: $color1;
+        .icon {
+          font-size: 2rem;
+          background-color: white;
+          border-radius: 10px;
+          padding: 5px;
+          color: $color6;
+        }
+      }
+    }
+  }
+  .trading {
+    @include flexer(row, space-between);
+    margin-top: 7rem;
+    .right {
+      width: 40%;
+      h3 {
+        color: $color2;
+        font-size: xx-large;
+        margin: 1rem 0;
+      }
+      h4 {
+        color: $color2;
+        font-size: large;
+        margin: 1rem 0;
+        @include flexer(row, flex-start);
+        .icon {
+          background-color: $color1;
+          border-radius: 40px;
+          margin: 0 5px;
+          color: $color4;
+        }
+      }
+      a {
+        all: unset;
+        @include flexer(row, flex-start);
+        color: $color1;
+        font-weight: 600;
+        .icon {
+          margin: 0 1rem;
+        }
+      }
+    }
+    .left {
+      width: 50%;
+      img {
+        height: 45vh;
+        width: 100%;
+        box-shadow: 10px 10px 10px 10px black;
+        border-radius: 30px;
+        box-shadow: 1px 7px 34px -6px rgba(0, 0, 0, 0.75);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .features {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .features {
+    display: none;
+  }
+}

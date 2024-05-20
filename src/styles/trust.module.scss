@@ -1,0 +1,103 @@
+@use "./utils" as utils;
+
+.trust {
+  background-color: utils.$color9;
+  width: 100%;
+  height: 72vh;
+  margin: auto 0;
+  .trustMain {
+    width: 90vw;
+    margin: 0 auto;
+    font-family: utils.$font1;
+    flex-wrap: wrap;
+    > h1 {
+      padding-top: 2rem;
+      text-align: center;
+      color: utils.$color6;
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+
+      @media screen and (max-width: 700px) {
+        font-size: 2rem;
+      }
+    }
+    > h3 {
+      margin: 1rem auto;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: utils.$color3;
+      text-align: center;
+      width: 50%;
+
+      @media screen and (max-width: 700px) {
+        width: 90%;
+        font-size: 1.2rem;
+      }
+    }
+    > .sliderbox {
+      padding: 1rem 2rem;
+      overflow-y: hidden;
+      gap: 2rem;
+      width: 100%;
+    }
+    .btn {
+      width: 100%;
+      @include utils.flexer();
+      button {
+        all: unset;
+        background-color: utils.$color1;
+        color: utils.$color4;
+        border-radius: 7px;
+        padding: 0.8rem 2.5rem;
+        margin: 4rem 2rem;
+      }
+      @media screen and (max-width: 600px) {
+        margin: 0;
+      }
+    }
+
+    @media screen and (max-width: 650px) {
+      width: 100vw;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    height: fit-content;
+  }
+}
+
+.slides {
+  // width: 20rem;
+  margin-right: 2rem;
+  @include utils.flexer(column);
+  padding: 1.3rem;
+  text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  background-color: utils.$color9;
+
+  > h4 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: utils.$color7;
+    margin-bottom: 0.8rem;
+  }
+  > p {
+    color: utils.$color8;
+    margin: 1rem;
+    font-size: 0.85rem;
+  }
+  > span {
+    margin: 0.51rem;
+    color: utils.$color1;
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin-right: 0.5rem;
+  }
+}
